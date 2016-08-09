@@ -22,24 +22,25 @@ var app = angular.module('modulename', ['ng-dual-slider']);
 
 </div>
 
-## labels
+## labels example
 
 $scope.hourLabel = ['12a','','1a','','2a','','3a','','4a', '','5a','','6a','','7a','','8a','','9a', '', '10a','','11a','','12p','','1p','','2p','','3p','','4p','','5p','','6p','','7p','','8p','','9p','','10p','','11p','','12a'];
 
-## expression
-hourExpression = function(value){
+## expression example
 
-    var hours = Math.floor(value),
+    var hourExpression = function(value){
 
-        half = hours > 12 ? hours - 12 : hours,
+        var hours = Math.floor(value),
 
-        isHalf = (value - hours) > 0 ? true : false,
+            half = hours > 12 ? hours - 12 : hours,
 
-        ampm = (hours < 12) ? " am" : " pm";
+            isHalf = (value - hours) > 0 ? true : false,
 
-    return (half === 0 ? 12 : half) + (isHalf ? ':30 ' : ' ') + ampm;
+            ampm = (hours < 12) ? " am" : " pm";
 
-};
+        return (half === 0 ? 12 : half) + (isHalf ? ':30 ' : ' ') + ampm;
+
+    };
 
 ## click-range
 
